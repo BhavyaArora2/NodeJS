@@ -3,8 +3,8 @@ const http=require("http");
 const hostname="localhost";
 const port=3000;
 const morgan=require("morgan");
-const server=http.createServer(app);
 const app=express();
+const server=http.createServer(app);
 app.use(morgan('dev'));
 app.use(express.static(__dirname + '/public'));
 app.use((req,res,next)=>{
